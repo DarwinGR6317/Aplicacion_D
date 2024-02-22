@@ -3,7 +3,6 @@ package com.example.aplicacion_d
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Button
 
 class ViewApellido : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +13,8 @@ class ViewApellido : AppCompatActivity() {
         val datoRecibido =intent.getStringExtra("dato")
 
         val textViewAp : TextView =findViewById(R.id.textViewAp)
-        val textNomb : TextView =findViewById(R.id.textNomb)
         //mostrar dato
-        textViewAp.text =  "Su apellido es: $datoRecibidoP"
-        textNomb.text= "Su nombre es: $datoRecibido"
+        textViewAp.text =  "Su nombre es: $datoRecibido y su apellido es: $datoRecibidoP"
+
     }
 }

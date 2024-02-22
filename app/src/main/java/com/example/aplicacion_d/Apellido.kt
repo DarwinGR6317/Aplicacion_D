@@ -12,12 +12,14 @@ class Apellido : AppCompatActivity() {
         setContentView(R.layout.activity_apellido)
 
         val btn_ap: Button = findViewById(R.id.btn_ap)
-        val dato: EditText = findViewById(R.id.txt_apellido)
+        val datop: EditText = findViewById(R.id.txt_apellido)
+        val dato =intent.getStringExtra("dato")
 
         btn_ap.setOnClickListener {
-            val datop = dato.text.toString()
+            val datop = datop.text.toString()
             val intent = Intent(this, ViewApellido::class.java).apply {
                 putExtra("datop", datop)
+                putExtra("dato", dato)
             }
             startActivity(intent)
         }

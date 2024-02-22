@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_comenzar.setOnClickListener {
             val dato = dato.text.toString()
-            val  intent =Intent(this, Bienvenida::class.java).apply {
+            val  intent =Intent(this, Apellido::class.java).apply {
                 putExtra("dato",dato)
             }
             startActivity(intent)
